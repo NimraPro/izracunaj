@@ -1,12 +1,23 @@
-body {
-  padding-top: 5px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700);
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
+html,body {
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  background-image: none !important;
+  margin: 0px;
+}
+.logorv {
+    height: 200px;
+    width: 250px;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    margin-left: 5%;
+}
+  .form-signin {
+  width: 330px;
+  max-width: 100%;
+  padding: 5px;
   margin: 0 auto;
 }
 .form-signin .form-signin-heading,
@@ -99,4 +110,102 @@ body {
 [data-tip]:hover:before,
 [data-tip]:hover:after {
 	display:block;
+}
+#menu1 {
+    width: 100%;
+    font-size: 35px;
+    color: #607d8b;
+    font-weight: bold;
+    padding: 15px;
+	margin-top: 20%;
+    margin-bottom: 35px;
+    border: 2px solid green;
+    border-radius: 15px;
+	outline-style: none;
+	font-family: Titillium Web, sans-serif;
+	font-weight: 700;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+#zovko {
+	height: 38px;
+	display: none;
+    width: 162px;
+	margin: auto;
+	background-image: url("../img/z1.png");
+}
+.okvir {
+    padding-top: 5px;
+    padding-bottom: 7px;
+	    height: 85px;
+}
+.okvir .nazivokvira 
+{
+float:left;
+margin:5px;
+}
+.okvir .tipke 
+{
+float:right;
+}
+
+input[type=checkbox] {
+  outline: none;
+  width: 58px;
+  height: 23px;
+  font-size: 11px;
+  line-height: 2;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #B9B9B9;
+  -webkit-appearance: none;
+
+  background-image: -webkit-gradient( 
+    linear, left top, left bottom,
+    color-stop(0, #E8E8E8),
+    color-stop(0.5, #E8E8E8),
+    color-stop(0.5, #FDFDFD),
+    color-stop(1, #FDFDFD)
+  );
+  box-shadow: 0px 1px 2px #AFAFAF inset;
+  color: #7F7F7F;
+}
+
+input[type=checkbox]:checked {
+  background-image: -webkit-gradient( 
+    linear, left top, left bottom,
+    color-stop(0, #367EF8),
+    color-stop(0.5, #367EF8),
+    color-stop(0.5, #66A3F8),
+    color-stop(1, #66A3F8)
+  );
+  box-shadow: 0px 1px 2px #1449A3 inset;
+  color: #fff;
+  text-shadow: 0px -1px 1px #000;
+  border: 1px solid #99B9E8;
+}
+
+input[type=checkbox]:before {
+  content: 'NE';
+  border-radius: 3px;
+  border-top: 1px solid #F7F7F7;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid: #BABABA;
+  border-left: 1px solid #BDBDBD;
+  background-image: -webkit-gradient( 
+    linear, left top, left bottom,
+    color-stop(0, #D8D8D8),
+    color-stop(1, #FBFBFB)
+  );
+  height: 20px;
+  width: 22px;
+  display: inline-block;
+  text-indent: 27px;
+}
+
+input[type=checkbox]:checked:before {
+  content: 'DA';
+  text-indent: -25px;
+  margin-left: 33px;
 }
