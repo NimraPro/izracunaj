@@ -1,21 +1,20 @@
 $(document).ready(function() {
-	$('#god').change(function() {
+    $("*").keyup( function() {
+				$('#god').keyup(function() {
 		var god = (new Date).getFullYear();
 		var sad = $(this).val();
 		if (sad.length == 4) $(this).val(god-sad);
 	});
-    $("*").keyup( function() {
       if ($('#arko').val() > 1 && $('#ccm').val() > 2 && $('#god').val()) {
         var amk = 8;
         var voda = 20;
         var stiker = 5;
-        var komunalna = 15;
-		var zastita = 20;
-        var tehnicki = 60.5; 
+        var komunalna = 20;
+        var tehnicki = 60.66; 
 		var potoreg = 0;
 		var tabl = 0;
 		var potvrda = 0;
-		var uplate = 9;
+		var uplate = 10;
 		var ukupno = amk+voda+stiker+komunalna+tehnicki+porez+putarina+polica+zastita+uplate - 0;
 		$('#potvrdaoreg').val(potoreg);
 		$('#potvrdaovl').val(potvrda);
@@ -24,12 +23,152 @@ $(document).ready(function() {
         $('#voda').val(voda);
         $('#stiker').val(stiker);
         $('#komunalna').val(komunalna);
-		$('#zastita').val(zastita);
 		$('#tehnicki').val(tehnicki); 
         $('#god').val();
 		$('#uplate').val(uplate);
 		$('#ukupno').val(ukupno);
-		
+		// ZAŠTITA OKOLINE
+	if ($('#god').val() > 0 && $('#god').val() <= 5 && $('#ccm').val() <= 750 ) {
+		zastita = 12.15;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 5 && $('#god').val() < 9 && $('#ccm').val() <= 750 ) {
+		zastita = 12.83;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 8 && $('#god').val() < 11 && $('#ccm').val() <= 750 ) {
+		zastita = 13.50;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 10 && $('#god').val() < 16 && $('#ccm').val() <= 750 ) {
+		zastita = 14.85;
+		$('#zastita').val(zastita);
+		}		 
+	else if ($('#god').val() > 15 && $('#god').val() < 21 && $('#ccm').val() <= 750 ) {
+		zastita = 16.20;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 20 && $('#god').val() < 31 && $('#ccm').val() <= 750 ) {
+		zastita = 18.90;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 30 && $('#ccm').val() <= 750 ) {
+		zastita = 21.60;
+		$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 0 && $('#god').val() <= 5 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 12.83;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 5 && $('#god').val() <= 8 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 13.55;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 8 && $('#god').val() <= 10 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 14.25;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 10 && $('#god').val() <= 15 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 15.68;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 15 && $('#god').val() <= 20 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 17.10;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 20 && $('#god').val() <= 30 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 19.95;
+	$('#zastita').val(zastita);
+		}
+		else if ($('#god').val() > 30 && $('#ccm').val() > 750 && $('#ccm').val() <= 1400 ) {
+		zastita = 22.80;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 0 && $('#god').val() <= 5 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 13.50;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 5 && $('#god').val() <= 8 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 14.25;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 8 && $('#god').val() <= 10 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 15;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 10 && $('#god').val() <= 15 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 16.50;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 15 && $('#god').val() <= 20 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 18;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 20 && $('#god').val() <= 30 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 21;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 30 && $('#ccm').val() > 1400 && $('#ccm').val() <= 2000 ) {
+		zastita = 24;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 0 && $('#god').val() <= 5 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 16.2;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 5 && $('#god').val() <= 8 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 17.1;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 8 && $('#god').val() <= 10 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 18;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 10 && $('#god').val() <= 15 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 19.8;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 15 && $('#god').val() <= 20 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 21.6;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 20 && $('#god').val() <= 30 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 25.2;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 30 && $('#ccm').val() > 2000 && $('#ccm').val() <= 4000 ) {
+		zastita = 28.8;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 0 && $('#god').val() <= 5 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 18.9;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 5 && $('#god').val() <= 8 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 19.95;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 8 && $('#god').val() <= 10 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 21;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 10 && $('#god').val() <= 15 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 23.1;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 15 && $('#god').val() <= 20 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 25.2;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 20 && $('#god').val() <= 30 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 29.4;
+	$('#zastita').val(zastita);
+		}
+	else if ($('#god').val() > 30 && $('#ccm').val() > 4000 && $('#ccm').val() <= 8000 ) {
+		zastita = 33.6;
+	$('#zastita').val(zastita);
+		}	
+		// POREZ
         if ($('#god').val() <= 2 && $('#ccm').val() <= 1600 ) {
         porez = 50;
         $('#porez').val(porez);
@@ -102,11 +241,11 @@ $(document).ready(function() {
 	  polica = 0;
 	  }
 	  	          if ($('#ccm').val() <= 1100) {
-        putarina = 25;
+        putarina = 25.20;
         $('#putarina').val(putarina);
          }
 	else if ($('#ccm').val() > 1100 && $('#ccm').val() <= 1600 ) {
-	putarina = 50;
+	putarina = 50.10;
 	$('#putarina').val(putarina);
 	}
 		else if ($('#ccm').val() > 1600 && $('#ccm').val() <= 2000 ) {
@@ -114,7 +253,7 @@ $(document).ready(function() {
 	$('#putarina').val(putarina);
 	}
 		else if ($('#ccm').val() > 2000 && $('#ccm').val() <= 2500 ) {
-	putarina = 100;
+	putarina = 99.90;
 	$('#putarina').val(putarina);
 	}
 		else if ($('#ccm').val() > 2500 && $('#ccm').val() <= 3000 ) {
@@ -142,11 +281,12 @@ $(document).ready(function() {
               $('#potvrdaoreg').val(potoreg);
               }
       else {
-                  potoreg = 0;
+                 potoreg = 0;
          $('#potvrdaoreg').val(potoreg);
       }
-	  	                        if ($('#tablice').is(' :checked')) {
-                          tabl = 20;
+
+               if ($('#tablice').is(' :checked')) {
+                tabl = 20;
               $('#tablice1').val(tabl);
               }
       else {
